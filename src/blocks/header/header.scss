@@ -1,0 +1,264 @@
+$t: 0.2s;
+$delay: 0.05s;
+.header {
+    position: relative;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    &__logo {
+        margin: 0 20px -80px;
+        flex-shrink: 0;
+    }
+    &__data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        font-style: normal;
+        font-size: px-to-em(16);
+        line-height: 120%;
+        color: $main-color;
+        text-decoration: none;
+        letter-spacing: px-to-em(2);
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__item:after {
+        content: "/";
+        margin: 0 30px;
+        color: $main-color;
+        opacity: 0.2;
+    }
+    &__item:last-child::after {
+        content: "";
+        margin: 0;
+    }
+    &__menu {
+        display: flex;
+        list-style: none;
+        text-align: center;
+    }
+    &__contacts {
+        display: flex;
+        align-items: center;
+        margin-right: 186px;
+    }
+    &__phone {
+        white-space: nowrap;
+    }
+    &__phone,
+    &__buttonlink {
+        font-style: normal;
+        font-weight: 600;
+        margin-right: 0px;
+        margin-left: 30px;
+        font-size: px-to-em(20);
+        line-height: 120%;
+        color: $main-color;
+        text-decoration: none;
+    }
+    &__buttonlink {
+        border: 2px solid $button-color;
+        box-sizing: border-box;
+        border-radius: 100px;
+        padding: 14px 22px;
+        text-align: center;
+        @include transition;
+    }
+    &__buttonlink:hover {
+        background: $button-color;
+        color: #ffffff;
+    }
+    &__burger,
+    &__mail {
+        display: none;
+        cursor: pointer;
+    }
+    &__info {
+        display: none;
+    }
+
+    @media screen and (max-width: 1500px) {
+        &__contacts {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        &__item:after {
+            content: none;
+        }
+        &__data {
+            display: none;
+            &--open {
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                flex-direction: column;
+                align-items: start;
+                background-color: #fff;
+                padding: 0 14px 40px;
+            }
+        }
+        &__item {
+            border-top: 1px solid #eaeaea;
+            padding: 20px 0;
+            text-align: left;
+        }
+        &__buttonlink {
+            display: none;
+        }
+        &__menu {
+            flex-direction: column;
+            border-bottom: 1px solid #eaeaea;
+            min-width: 100%;
+            margin-bottom: 40px;
+        }
+        &__contacts {
+            flex-direction: column;
+        }
+        &__phone {
+            display: none;
+        }
+        &__mail {
+            display: block;
+        }
+        &__burg {
+            position: relative;
+            margin-left: 20px;
+            transform: scale(0.3);
+        }
+        &__burger {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            padding: 15px;
+            cursor: pointer;
+            &.js-active {
+                &:before {
+                    animation: slideLeft $t $delay ease-out forwards;
+                }
+                &:after {
+                    animation: slideRight $t $delay ease-out forwards;
+                }
+                .header__bar {
+                    animation: rotate45 $t ease-out forwards;
+                    &:last-child {
+                        animation: rotate135 $t $t ease-out forwards;
+                    }
+                }
+            }
+            &.js-back {
+                &:before {
+                    transform: translateX(-120%);
+                    animation: slideBack $t $delay ease-out forwards;
+                }
+                &:after {
+                    transform: translateX(120%);
+                    animation: slideBack $t $delay ease-out forwards;
+                }
+                .header__bar {
+                    transform: rotate(-45deg);
+                    animation: rotateBack $t ease-out forwards;
+                    &:last-child {
+                        transform: rotate(-135deg);
+                        animation: rotateBack $t $t ease-out forwards;
+                    }
+                }
+            }
+            &:before {
+                content: "";
+                display: block;
+                width: 75px;
+                height: 10px;
+                background: $main-color;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: 75px;
+                height: 10px;
+                background: $main-color;
+            }
+            .header__bar {
+                display: block;
+                width: 75px;
+                height: 10px;
+                background: $main-color;
+                margin: 14px 0;
+                &:last-child {
+                    opacity: 0;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    top: 25px;
+                }
+            }
+        }
+        &__logo {
+            display: block;
+            &--open {
+                display: none;
+            }
+        }
+        &__info {
+            display: block;
+        }
+        @media screen and (max-width: 991px) {
+            &__mail {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+@keyframes rotate135 {
+    from {
+        opacity: 1;
+        transform: rotate(-45deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(-135deg);
+    }
+}
+
+@keyframes rotate45 {
+    to {
+        transform: rotate(-45deg);
+    }
+}
+@keyframes rotateBack {
+    to {
+        transform: rotate(0);
+    }
+}
+@keyframes slideRight {
+    to {
+        transform: translateX(122%);
+    }
+}
+@keyframes slideLeft {
+    to {
+        transform: translateX(-122%);
+    }
+}
+@keyframes slideBack {
+    to {
+        transform: translateX(0);
+    }
+}

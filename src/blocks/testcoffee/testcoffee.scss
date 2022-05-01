@@ -1,0 +1,123 @@
+.testcoffee {
+    background-color: $background-color;
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 80px 0 30px;
+    }
+    &__info {
+        margin-left: 170px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    &__image {
+        margin-right: 170px;
+    }
+
+    &__title {
+        max-width: 600px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: 148%;
+        text-transform: uppercase;
+        color: $main-color;
+        margin-bottom: 30px;
+        font-family: "Oswald", sans-serif;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 600;
+        font-size: px-to-em(24);
+        line-height: 120%;
+        color: $main-color;
+        text-decoration: none;
+        margin-right: 34px;
+        background: #fed96a;
+        border-radius: 20px;
+        padding: 0 10px;
+    }
+    &__links {
+        margin-bottom: 18px;
+        white-space: nowrap;
+    }
+    &__text {
+        font-family: Lato;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        color: $main-color;
+        max-width: 580px;
+    }
+
+    @media screen and (max-width: 1500px) {
+        &__info {
+            margin-left: 0;
+        }
+        &__image {
+            margin-right: 0;
+            max-width: 50%;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__title {
+            font-size: px-to-em(32);
+            line-height: px-to-per(47, 32);
+            max-width: 100%;
+        }
+        &__link {
+            font-size: px-to-em(16);
+            line-height: 120%;
+        }
+        &__text {
+            font-size: px-to-em(16);
+            line-height: 140%;
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__content {
+            flex-direction: column;
+        }
+        &__image {
+            max-width: 100%;
+        }
+        &__info {
+            max-width: 540px;
+            margin: 0 0 40px;
+            text-align: center;
+        }
+        &__links {
+            display: flex;
+            justify-content: center;
+        }
+        &__link {
+            margin: 0 16px;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__content {
+            padding-top: 118px;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__info {
+            max-width: 100%;
+            text-align: left;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        &__title {
+            font-size: px-to-em(28);
+            line-height: px-to-per(44, 28);
+        }
+        &__link {
+            margin: 0 8px;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.stickers {
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 64px 0 56px;
+    }
+    &__sticker {
+        margin: 0 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 330px;
+    }
+    &__text {
+        margin-top: 20px;
+        text-align: center;
+        color: $main-color;
+        font-weight: 600;
+        font-size: px-to-em(20);
+        line-height: 120%;
+    }
+    @media screen and (max-width: 767px) {
+        &__content {
+            flex-direction: column;
+        }
+        &__sticker {
+            margin-bottom: 40px;
+        }
+        &__sticker:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__content {
+            padding-top: 30px;
+            padding-bottom: 28px;
+        }
+        &__sticker {
+            margin-right: 42px;
+            margin-bottom: 12px;
+        }
+        &__text {
+            margin-top: 0;
+        }
+        &__img {
+            transform: scale(0.7);
+        }
+    }
+    @media screen and (max-width: 320px) {
+        &__sticker {
+            margin-right: 22px;
+        }
+    }
+}

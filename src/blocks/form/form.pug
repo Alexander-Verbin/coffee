@@ -1,0 +1,24 @@
+mixin form(title1,title2,text1,text2,image)
+  .form&attributes(attributes)
+    .form__content(class=image=="cap" 
+                            ? "form__content--cap" 
+                            : image=="glass"
+                                ? "form__content--glass"
+                                : "") 
+      img(src=`img/${image}.png` alt="Кофе" class=image=="cap" 
+                                                      ? "form__image--cap" 
+                                                      : image=="glass"
+                                                          ? "form__image--glass"
+                                                          :"").form__image
+      .form__info(class=image=="glass" ? "form__info--glass" :"")
+        .form__titles
+          h2.form__title(class=image=="glass" ? "form__title--big" :"")=title1 
+          h2.form__title(class=image=="glass" ? "form__title--big" :"")=title2
+          if text1 
+            p.form__titletext=text1
+            p.form__titletext=text2
+        form.form__form
+          input(type="tel" placeholder="Ваш номер телефона").form__input
+          button.form__button Оставить заявку
+        p.form__text Позвоним вам и ответим на все ваши вопросы, поможем выбрать сорт кофе.
+    

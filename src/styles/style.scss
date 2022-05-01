@@ -1,0 +1,60 @@
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+/* Plugins */
+
+/* Blocks */
+
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-family: Lato;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+@import "./src/blocks/header/header";
+
+@import "./src/blocks/testcoffee/testcoffee";
+
+@import "./src/blocks/form/form";
+
+@import "./src/blocks/stickers/stickers";
+@import "./src/blocks/coffeefire/coffeefire";
+@import "./src/blocks/process/process";
+@import "./src/blocks/autor/autor";
+@import "./src/blocks/delivery/delivery";
+@import "./src/blocks/quality/quality";
+@import "./src/blocks/assortment/assortment";
+@import "./src/blocks/staff/staff";
+@import "./src/blocks/input/input";
+@import "./src/blocks/price/price";
+@import "./src/blocks/footer/footer";
+@import "./src/blocks/slider/slider";
+@import "./src/blocks/info/info";
+@import "./src/blocks/popup/popup";

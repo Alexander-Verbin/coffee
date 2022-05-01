@@ -1,0 +1,217 @@
+.form {
+    background-color: $background-color;
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0 64px;
+        &--cap {
+            max-width: 1100px;
+            padding-top: 70px;
+            justify-content: flex-end;
+        }
+        &--glass {
+            padding: 52px 0 20px;
+        }
+    }
+    &__info {
+        margin-left: 36px;
+        margin-top: 10px;
+        &--glass {
+            margin-left: 70px;
+        }
+    }
+    &__titles {
+        margin-bottom: 25px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: px-to-em(24);
+        line-height: 150%;
+        text-transform: uppercase;
+        color: $main-color;
+        font-family: "Oswald", sans-serif;
+        &text {
+            font-size: px-to-em(17);
+            line-height: 140%;
+            color: $main-color;
+            margin-top: 10px;
+        }
+        &text:last-of-type {
+            margin-top: 0;
+        }
+        &--big {
+            font-weight: 500;
+            font-size: px-to-em(40);
+            line-height: 148%;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+    }
+    &__input {
+        background: #ffffff;
+        border: 1px solid #eaeaea;
+        font-weight: normal;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        padding: 20px;
+        width: 445px;
+        margin-right: 20px;
+    }
+    &__button {
+        display: flex;
+        flex-direction: column;
+        background: $button-color;
+        border-radius: 100px;
+        padding: 20px 50px;
+        font-weight: 600;
+        font-size: px-to-em(18);
+        line-height: 122%;
+        color: #ffffff;
+        border: none;
+        margin-right: 4px;
+        cursor: pointer;
+        align-items: center;
+    }
+    &__button:after {
+        content: "";
+        border-bottom: 2px solid #fff;
+        width: 0;
+        @include transition;
+    }
+    &__button:hover::after {
+        width: 100%;
+    }
+    &__form {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: px-to-em(15);
+        line-height: 140%;
+        color: #989a9d;
+        max-width: 400px;
+    }
+    &__image {
+        &--cap {
+            position: absolute;
+            left: 0;
+        }
+        &--glass {
+            margin-left: 46px;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        position: relative;
+        &__content {
+            justify-content: space-evenly;
+            &--cap {
+                justify-content: end;
+            }
+        }
+        &__image {
+            &--cap {
+                max-width: 46%;
+            }
+        }
+        &__form {
+            flex-direction: column;
+        }
+        &__input {
+            margin-right: 0;
+        }
+        &__button {
+            max-width: 250px;
+            margin-top: 20px;
+            margin-right: 0;
+            font-size: px-to-em(18);
+            line-height: px-to-per(22, 18);
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__content {
+            flex-direction: column;
+        }
+        &__info {
+            margin-left: 0;
+        }
+        &__title {
+            text-align: center;
+            &text {
+                text-align: center;
+            }
+        }
+        &__form {
+            align-items: center;
+        }
+        &__image {
+            order: 1;
+            max-width: 100%;
+            &--cap {
+                top: 100%;
+                max-width: 100%;
+                transform: translateY(-50%);
+            }
+            &--glass {
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+        &__text {
+            text-align: center;
+            max-width: 100%;
+            margin-bottom: 62px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__title {
+            font-size: px-to-em(24);
+            line-height: px-to-per(36, 24);
+        }
+        &__input {
+            width: 330px;
+        }
+        &__text {
+            font-size: px-to-em(15);
+            line-height: 140%;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__content {
+            padding-top: 116px;
+            padding-bottom: 82px;
+        }
+        &__title {
+            text-align: left;
+            margin-right: 20px;
+            &text {
+                text-align: left;
+            }
+            &--big:last-child {
+                margin-bottom: 18px;
+            }
+        }
+        &__title:last-of-type {
+            margin-bottom: 42px;
+        }
+        &__button {
+            margin-top: 24px;
+            margin-right: 24px;
+        }
+        &__image {
+            &--cap {
+                transform: translate(-20%, -50%);
+            }
+            &--glass {
+                transform: translateY(-26px) scale(1.2);
+            }
+        }
+        &__input {
+            width: calc(100% - 20px);
+        }
+    }
+}

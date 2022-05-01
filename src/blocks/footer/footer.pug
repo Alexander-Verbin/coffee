@@ -1,0 +1,31 @@
+mixin footer(modifier)
+  .footer&attributes(attributes)
+    .footer__content
+      .footer__logo
+        a(href="#").footer__logolink
+          img(src="img/logo.png" alt="Логотип").footer__logoimage
+      .footer__blocks
+        p.footer__blockcopy Использование любых материалов с этого сайта возможно только после письменного согласия владельца&nbsp;авторских прав
+        .footer__block 
+          h2.footer__blocktitle Мы предлагаем
+          ul.footer__blocklinks
+            li.footer__blockitem
+              a(href="#").footer__blocklink Кофе оптом
+            li.footer__blockitem
+              a(href="#").footer__blocklink White Label
+            li.footer__blockitem
+              a(href="#").footer__blocklink Бесплатная кофемашина
+        .footer__block 
+          h2.footer__blocktitle Помощь
+          ul.footer__blocklinks
+            li.footer__blockitem
+              a(href="#").footer__blocklink Частые вопросы
+            li.footer__blockitem
+              a(href="#").footer__blocklink Реквизиты
+            li.footer__blockitem
+              a(href="#").footer__blocklink О компании ПКМ
+        .footer__block 
+          +info('footer')
+    .footer__copyright 
+      p.footer__copyrighttext © 2013-2021 “ПКМ”
+      a(href="#").footer__copyrighttext Политика конфиденциальности

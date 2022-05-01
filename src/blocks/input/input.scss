@@ -1,0 +1,85 @@
+.input {
+    background-color: $background-color;
+    &__content {
+        width: 95%;
+        max-width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 0;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: px-to-em(24);
+        line-height: px-to-per(36, 24);
+        text-transform: uppercase;
+        color: $main-color;
+        font-family: "Oswald", sans-serif;
+        max-width: 330px;
+        margin-right: 40px;
+    }
+    &__form {
+        display: flex;
+    }
+    &__input {
+        background: #ffffff;
+        border: 1px solid #eaeaea;
+        font-weight: normal;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        padding: 20px;
+        width: 445px;
+        margin-right: 20px;
+    }
+    &__button {
+        background: $button-color;
+        border-radius: 100px;
+        padding: 20px 66px;
+        font-weight: 600;
+        font-size: px-to-em(18);
+        line-height: px-to-per(22, 18);
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 991px) {
+        &__content {
+            flex-direction: column;
+            padding: 60px 0;
+        }
+        &__form {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__input {
+            margin: 0 0 20px 0;
+        }
+        &__title {
+            font-size: px-to-em(24);
+            line-height: px-to-per(36, 24);
+            max-width: 100%;
+            text-align: center;
+            margin: 0 0 30px 0;
+        }
+        &__button {
+            max-width: 240px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__input {
+            width: 330px;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__content {
+            padding-top: 102px;
+            padding-bottom: 56px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        &__input {
+            width: 296px;
+        }
+    }
+}

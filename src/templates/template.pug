@@ -1,0 +1,9 @@
+doctype html
+html(lang='ru')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    block content
+    | <script type="text/javascript" defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    script(src="js/scripts.js")

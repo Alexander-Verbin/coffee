@@ -1,0 +1,72 @@
+.info {
+    &__icon {
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        margin-bottom: 14px;
+        @include flex-dir;
+        @include transition;
+    }
+    &__icon:hover {
+        background-color: $button-color;
+    }
+    &__icon svg {
+        fill: $main-color;
+        opacity: 0.5;
+    }
+    &__icon:hover svg {
+        fill: white;
+        opacity: 1;
+    }
+    &__icons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__tel {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: 500;
+        font-size: px-to-em(24);
+        line-height: px-to-per(36, 24);
+        text-transform: uppercase;
+        color: $main-color;
+        text-decoration: none;
+        margin-bottom: 14px;
+        display: block;
+        @include transition;
+    }
+    &__tel:hover {
+        color: $button-color;
+    }
+    &__mail {
+        font-weight: 500;
+        font-size: px-to-em(16);
+        line-height: px-to-per(19, 16);
+        color: $main-color;
+        text-decoration: none;
+        @include transition;
+    }
+    &__mail:hover {
+        color: $button-color;
+    }
+    &__text {
+        margin-top: 14px;
+        margin-bottom: 4px;
+        font-weight: 500;
+        font-size: px-to-em(16);
+        line-height: px-to-per(19, 16);
+        color: $main-color;
+    }
+    &__map {
+        font-weight: 500;
+        font-size: px-to-em(15);
+        line-height: 140%;
+        color: #2f80ed;
+        @include transition;
+    }
+    &__map:hover {
+        color: $button-color;
+    }
+}

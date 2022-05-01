@@ -1,0 +1,91 @@
+.autor {
+    background: $main-color;
+    margin-bottom: 0px;
+    &__content {
+        width: 95%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 132px;
+    }
+    &__info {
+        max-width: 500px;
+        margin-top: 50px;
+        margin-left: 150px;
+        margin-right: 10px;
+    }
+    &__title {
+        font-family: Oswald;
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: px-to-per(59, 40);
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 40px;
+    }
+    &__text {
+        font-family: Lato;
+        font-size: px-to-em(17);
+        line-height: 140%;
+        color: #ffffff;
+        margin-bottom: 24px;
+    }
+    &__image {
+        margin: 0 0 -50px;
+        margin-right: 200px;
+        object-fit: contain;
+    }
+    @media screen and (max-width: 1500px) {
+        &__info {
+            margin-left: 0;
+        }
+        &__image {
+            margin-right: 0;
+            max-width: 50%;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        &__image {
+            max-width: 90%;
+            margin-bottom: -320px;
+        }
+        &__info {
+            max-width: 100%;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+        &__title {
+            font-size: px-to-em(32);
+            line-height: px-to-per(47, 32);
+            max-width: 100%;
+        }
+        &__text {
+            font-size: px-to-em(16);
+            line-height: 140%;
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__info {
+            text-align: left;
+            margin-bottom: 102px;
+        }
+        &__image {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        &__info {
+            margin-bottom: 70px;
+        }
+    }
+}

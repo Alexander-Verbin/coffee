@@ -1,0 +1,115 @@
+.staff {
+    &__content {
+        width: 95%;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 64px 0 64px;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__title {
+        max-width: 600px;
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: px-to-per(59, 40);
+        text-transform: uppercase;
+        color: $main-color;
+        font-family: "Oswald", sans-serif;
+    }
+    &__button {
+        background: $button-color;
+        border-radius: 100px;
+        padding: 20px 60px;
+        font-weight: 600;
+        font-size: px-to-em(18);
+        line-height: px-to-per(22, 18);
+        color: #ffffff;
+        border: none;
+        text-decoration: none;
+    }
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        margin: 0 12px;
+        &image {
+            margin-bottom: 24px;
+        }
+        &title {
+            font-weight: 600;
+            font-size: px-to-em(24);
+            line-height: 120%;
+            color: $main-color;
+            margin-bottom: 5px;
+        }
+        &text {
+            font-size: px-to-em(15);
+            line-height: 140%;
+            color: #989a9d;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        &__card {
+            &image {
+                max-width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__content {
+            padding: 80px 0 140px;
+        }
+        &__info {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        &__title {
+            font-size: px-to-em(32);
+            line-height: px-to-per(47, 32);
+            max-width: 100%;
+            text-align: center;
+        }
+        &__button {
+            transform: translateY(730%);
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__cards {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__card {
+            margin: 0 0 12px 0;
+        }
+        &__button {
+            transform: translateY(2200%);
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__content {
+            padding-top: 10px;
+        }
+        &__card {
+            &image {
+                max-width: 82%;
+                margin-bottom: 8px;
+            }
+        }
+        &__button {
+            transform: translateY(730%);
+        }
+        &__title {
+            text-align: left;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        &__button {
+            transform: translateY(698%);
+        }
+    }
+}

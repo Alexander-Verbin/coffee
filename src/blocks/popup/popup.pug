@@ -1,0 +1,14 @@
+mixin popup(modifier)
+  .popup&attributes(attributes)
+    .popup__back 
+    .popup__content 
+      | <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup__close">
+      |   <path d="M28.5 9.5L9.5 28.5" stroke="#989A9D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      |   <path d="M9.5 9.5L28.5 28.5" stroke="#989A9D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      | </svg>
+      h3.popup__title Оставьте заявку и получите оптовый прайс на весь ассортимент кофе
+      p.popup__info Мы позвоним вам, вышлем оптовый прайс и ответим на все вопросы.
+      form.popup__form
+        input(type="tel" placeholder="Ваш номер телефона").popup__tel
+        input(type="email" placeholder="Ваш Email").popup__email
+        button.popup__btn Оставить заявку

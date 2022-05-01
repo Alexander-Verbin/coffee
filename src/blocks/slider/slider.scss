@@ -1,0 +1,175 @@
+.slider {
+    &__content {
+        width: 95%;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 122px 0 64px;
+    }
+    &__title {
+        max-width: 540px;
+        font-family: Oswald;
+        font-weight: 500;
+        font-size: px-to-em(40);
+        line-height: px-to-per(59, 40);
+        text-transform: uppercase;
+        color: $main-color;
+        margin-bottom: 40px;
+    }
+    &__arrow {
+        cursor: pointer;
+        background-color: $background-color;
+        padding: 24px;
+        &--next {
+            transform: rotate(180deg);
+        }
+    }
+    &__area {
+        background-color: $background-color;
+        overflow: hidden;
+    }
+    &__slider {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__slide {
+        display: flex;
+        font-display: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        max-width: 920px;
+        padding: 68px 84px 56px 66px;
+        margin: 10px;
+        &images {
+            margin-right: 44px;
+        }
+        &img {
+            margin-bottom: 40px;
+        }
+        &img:last-of-type {
+            margin-bottom: 0;
+        }
+        &title {
+            font-family: Lato;
+            font-weight: 600;
+            font-size: px-to-em(24);
+            line-height: 120%;
+            color: $main-color;
+            margin-bottom: 2px;
+        }
+        &company {
+            font-family: Lato;
+            font-weight: normal;
+            font-size: px-to-em(15);
+            line-height: 140%;
+            color: #989a9d;
+            margin-bottom: 24px;
+        }
+        &text {
+            font-family: Lato;
+            font-weight: normal;
+            font-size: px-to-em(16);
+            line-height: 140%;
+            color: $main-color;
+        }
+    }
+    .slick-track {
+        display: flex;
+    }
+    .slick-initialized .slick-slide {
+        display: flex;
+    }
+    @media screen and (max-width: 991px) {
+        &__content {
+            padding-top: 312px;
+        }
+        &__title {
+            font-size: px-to-em(32);
+            line-height: px-to-per(47, 32);
+            text-align: center;
+            max-width: 100%;
+        }
+        &__slide {
+            flex-direction: column;
+            &images {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__slide {
+            padding: 20px 10px 10px 10px;
+        }
+
+        &__slider {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .slick-slider {
+            width: 100%;
+            order: 1;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__content {
+            padding-top: 110px;
+            padding-bottom: 20px;
+        }
+        &__title {
+            margin-bottom: 0;
+            text-align: left;
+        }
+        &__area {
+            background: none;
+        }
+        &__arrow {
+            background: none;
+            align-self: end;
+            max-width: 20%;
+            &--prev {
+                position: relative;
+                z-index: 1;
+                transform: translateY(310%);
+            }
+            &--next {
+                transform: translateY(135%) rotate(180deg);
+            }
+        }
+        &__slider {
+            margin-top: -120px;
+        }
+        &__slide {
+            &images {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 42px;
+                min-height: 120px;
+                margin-bottom: 0;
+            }
+            &img {
+                max-width: 50%;
+                margin-bottom: 0;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            &__arrow {
+                padding: 20px;
+            }
+            &__slide {
+                &images {
+                    padding-right: 32px;
+                }
+                &img:first-of-type {
+                    margin-right: 6px;
+                }
+            }
+        }
+        .slick-slide {
+            align-items: start;
+        }
+        &__slider {
+            flex-direction: column;
+        }
+    }
+}

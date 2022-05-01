@@ -1,0 +1,104 @@
+.process {
+    &__content {
+        width: 95%;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__block {
+        width: 330px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 52px;
+        padding-top: 80px;
+        position: relative;
+    }
+    &__text {
+        position: relative;
+        font-weight: 600;
+        font-size: px-to-em(24);
+        line-height: 120%;
+        color: $main-color;
+        max-width: 290px;
+        z-index: 1;
+    }
+    &__block::after {
+        content: ">";
+        font-family: Oswald, sans-serif;
+        font-weight: 500;
+        font-size: px-to-em(80);
+        text-transform: uppercase;
+        color: #f5f8f9;
+        line-height: px-to-per(82, 80);
+    }
+    &__block:nth-child(3n)::after {
+        content: none;
+    }
+    &__num {
+        position: absolute;
+        top: 0;
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: 500;
+        font-size: px-to-em(80);
+        line-height: 149%;
+        color: #f5f8f9;
+    }
+    @media screen and (max-width: 1100px) {
+        &__block::after {
+            content: none;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__block::after {
+            content: ">";
+            font-family: Oswald, sans-serif;
+            font-weight: 500;
+            font-size: px-to-em(80);
+            text-transform: uppercase;
+            color: #f5f8f9;
+            line-height: px-to-per(82, 80);
+        }
+        &__block:nth-child(even)::after {
+            content: none;
+        }
+        &__block:nth-child(3)::after {
+            content: ">";
+            font-family: Oswald, sans-serif;
+            font-weight: 500;
+            font-size: px-to-em(80);
+            text-transform: uppercase;
+            color: #f5f8f9;
+            line-height: px-to-per(82, 80);
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__content {
+            justify-content: center;
+        }
+        &__block:nth-child(3)::after {
+            content: none;
+        }
+        &__block:nth-child(2n) {
+            justify-content: flex-end;
+        }
+        &__block::after {
+            content: none;
+        }
+        &__block:nth-of-type(2n) {
+            text-align: right;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__content {
+            padding-top: 155px;
+            padding-bottom: 106px;
+        }
+        &__block {
+            margin-bottom: 10px;
+        }
+    }
+}

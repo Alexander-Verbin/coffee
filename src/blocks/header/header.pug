@@ -1,0 +1,22 @@
+mixin header(modifier)
+  header.header&attributes(attributes)
+    .header__content
+      .header__burg
+        .header__burger
+          span.header__bar
+          span.header__bar
+      a(href='/').header__logo
+        img(src='img/logo.png' alt="Логотип").header__logoimage
+      .header__data
+        ul.header__menu 
+          li.header__item 
+            a(href='#').header__link Кофе оптом  
+          li.header__item 
+            a(href='#').header__link White Label
+          li.header__item 
+            a(href='#').header__link Бесплатная кофемашина
+        .header__contacts      
+          a(href='tel:+78126034911').header__phone +7 812 603 49 11
+          a(href='#').header__buttonlink Оставить заявку
+        +info('header')
+      img(src="img/mail.svg", alt="Почта").header__mail
